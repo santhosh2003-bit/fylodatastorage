@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+    * {
+      margin: 0%;
+      font-family: Raleway;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .container {
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 70px 30px;
+margin: 30px;
+    }
+    .content{
+      background-color: hsl(229, 7%, 55%);
+      height: 250px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    
+     .content .gradiant{
+      position: relative;
+      width: 550px;
+     }
+     .content .inner{
+      display: flex;
+      position: relative;
+      width: fit-content;
+      left: 50%;
+      top: 32%;
+      align-items: center;
+      transform: translate(-50%,-50%);
+     }
+     .content .inner .leftside{
+width: fit-content;
+padding: 15px 55px 15px 15px;
+display: flex;
+flex-direction: column;
+background-color: hsl(228, 56%, 26%);
+border-radius: 5%;
+border-top-right-radius: 50%;
+     }
+     .content .inner .rightside{
+      margin-left: 10px;
+      width: fit-content;
+      background-color: hsl(228, 56%, 26%);
+      border-radius: 5%;
+      color: white;
+      align-self: flex-end;
+      padding: 20px;
+      position: relative;
+      
+     }
+
+     .content .inner .rightside h4{
+position: absolute;
+background-color: white;
+padding: 6px 8px;
+color: hsl(229, 15%, 23%);
+top: -20px;
+right:15px;
+border-radius: 6px;
+display: flex;
+align-items: center;
+
+     }
+     .content .inner .rightside h4 span{
+      font-size: 6px;
+      margin-left: 5px;
+      color: hsl(229, 7%, 55%);
+      z-index: 2;
+     }
+     .content .inner .rightside h4::before{
+      content: " ";
+      position: absolute;
+      background-color: white;
+      width: 15px;
+      height: 15px;
+     bottom: 0;
+      right: 0;
+      transform: skew(180deg,34deg);
+     }
+     .content .inner .rightside p{
+      font-size: 7px;
+      color: hsl(229, 7%, 55%);
+      margin-bottom: 7px;
+     }
+     .content .inner .rightside p span{
+      font-size: 8px;
+      color: white;
+
+     }
+     .content .inner .rightside .range{
+      width: 190px;
+      height: 5px;
+      border-radius: 4px;
+      position: relative;
+      padding: 1px;
+      background-color: hsl(231,53%,17%);
+     }
+     .content .inner .rightside .range::before{
+      position: absolute;
+      content: "";
+      top: 5%;
+      left:71.1px ;
+      transform: translate(-50%);
+width: 140px;
+height: 6px;
+border-radius: 4px;
+background: linear-gradient(to right,hsl(6,100%,80%),hsl(335,100%,65%));
+     }
+     .content .inner .rightside .range span[class="thumb"]{
+width: 5px;
+height: 5px;
+background-color: white;
+position: absolute;
+right: 52px;
+border-radius: 50%;
+     }
+     .content .inner .rightside .range .left{
+      font-size: 7px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+     }
+     .content .inner .rightside .range .right{
+      font-size: 7px;
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+     }
+     .content .inner .leftside .logo{
+      width: 50px;
+     }
+     .content .inner .leftside .threeicons{
+      margin-top: 10px;
+     }
+     .content .inner .leftside .threeicons img{
+padding: 5px;
+background-color: hsl(229, 57%, 11%);
+width: 8px;
+height: 8px;
+border-radius: 5px;
+     }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="content">
+      <img src="./images/bg-desktop.png" alt="" class="gradiant">
+      <div class="inner">
+        <div class="leftside">
+          <img src="./images/logo.svg" alt="" class="logo">
+          <div class="threeicons">
+            <img src="./images/icon-document.svg" alt="">
+            <img src="./images/icon-folder.svg" alt="">
+            <img src="./images/icon-upload.svg" alt="">
+          </div>
+        </div>
+        <div class="rightside">
+          <h4>185 <span>GB LEFT</span></h4>
+          <p>You’ve used <span>815 GB </span>of your storage</p>
+
+          <div class="range">
+            <span class="thumb"></span>
+            <span class="left">0 GB</span>
+            <span class="right">1000 GB</span>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
